@@ -1,0 +1,66 @@
+{
+  "tags": [
+    {
+      "label": "sv-icon-sprite",
+      "description": "",
+      "attributes": [
+        {
+          "label": "fill-color",
+          "description": "Optional Fill color prop (default: \"none\")",
+          "required": false
+        },
+        {
+          "label": "icon",
+          "description": "Required Icon prop (default: undefined)",
+          "required": true
+        },
+        {
+          "label": "scale",
+          "description": "Optional Scale prop (default: \"1\")",
+          "required": false
+        },
+        {
+          "label": "stroke-color",
+          "description": "Optional Stroke color prop (default: \"currentColor\")",
+          "required": false
+        },
+        {
+          "label": "stroke-width",
+          "description": "Optional Stroke Width prop (default: \"2\")",
+          "required": false
+        }
+      ]
+    },
+    {
+      "label": "sv-icon",
+      "description": "",
+      "attributes": [
+        {
+          "label": "fill-color",
+          "description": "Optional Fill color prop (default: \"none\")",
+          "required": false
+        },
+        {
+          "label": "icon-path",
+          "description": "Required Icon Path prop (default: undefined)",
+          "required": true
+        },
+        {
+          "label": "scale",
+          "description": "Optional Scale prop (default: \"1\")",
+          "required": false
+        },
+        {
+          "label": "stroke-color",
+          "description": "Optional Stroke color prop (default: \"currentColor\")",
+          "required": false
+        },
+        {
+          "label": "stroke-width",
+          "description": "Optional Stroke Width prop (default: \"2\")",
+          "required": false
+        }
+      ]
+    }
+  ]
+}

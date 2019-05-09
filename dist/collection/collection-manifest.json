@@ -1,0 +1,96 @@
+{
+  "components": [
+    {
+      "tag": "sv-icon",
+      "dependencies": [],
+      "componentClass": "SvIcon",
+      "componentPath": "components/sv-icon/sv-icon.js",
+      "styles": {},
+      "props": [
+        {
+          "name": "fillColor",
+          "type": "String",
+          "reflectToAttr": true,
+          "attr": "fill-color"
+        },
+        {
+          "name": "iconPath",
+          "type": "String",
+          "reflectToAttr": true,
+          "attr": "icon-path"
+        },
+        {
+          "name": "scale",
+          "type": "String",
+          "reflectToAttr": true,
+          "attr": "scale"
+        },
+        {
+          "name": "strokeColor",
+          "type": "String",
+          "reflectToAttr": true,
+          "attr": "stroke-color"
+        },
+        {
+          "name": "strokeWidth",
+          "type": "String",
+          "reflectToAttr": true,
+          "attr": "stroke-width"
+        }
+      ],
+      "hostElement": {
+        "name": "el"
+      },
+      "shadow": true
+    },
+    {
+      "tag": "sv-icon-sprite",
+      "dependencies": [],
+      "componentClass": "SvIconSprite",
+      "componentPath": "components/sv-icon-sprite/sv-icon-sprite.js",
+      "styles": {},
+      "props": [
+        {
+          "name": "fillColor",
+          "type": "String",
+          "reflectToAttr": true,
+          "attr": "fill-color"
+        },
+        {
+          "name": "icon",
+          "type": "String",
+          "reflectToAttr": true,
+          "attr": "icon"
+        },
+        {
+          "name": "scale",
+          "type": "String",
+          "reflectToAttr": true,
+          "attr": "scale"
+        },
+        {
+          "name": "strokeColor",
+          "type": "String",
+          "reflectToAttr": true,
+          "attr": "stroke-color"
+        },
+        {
+          "name": "strokeWidth",
+          "type": "String",
+          "reflectToAttr": true,
+          "attr": "stroke-width"
+        }
+      ],
+      "hostElement": {
+        "name": "el"
+      }
+    }
+  ],
+  "collections": [],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "0.16.2",
+    "typescriptVersion": "3.2.2"
+  },
+  "bundles": []
+}
