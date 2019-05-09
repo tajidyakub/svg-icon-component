@@ -1,0 +1,1 @@
+// svicon: ES Module

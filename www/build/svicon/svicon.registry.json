@@ -1,0 +1,20 @@
+{
+  "namespace": "svicon",
+  "fsNamespace": "svicon",
+  "loader": "../svicon.js",
+  "corePolyfilled": "es5-build-disabled.js",
+  "core": "svicon.core.js",
+  "components": {
+    "sv-icon": {
+      "bundleIds": {
+        "$": "sv-icon"
+      },
+      "encapsulation": "shadow"
+    },
+    "sv-icon-sprite": {
+      "bundleIds": {
+        "$": "sv-icon-sprite"
+      }
+    }
+  }
+}
