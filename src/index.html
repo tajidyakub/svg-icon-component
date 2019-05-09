@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <title>SVIcon</title>
+  <meta name="description" content="Web Component untuk inline SVG di halaman HTML anda">
+  <script src="/build/svicon.js"></script>
+  <link href="https://unpkg.com/tailwindcss@next/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
+</head>
+<body>
+  <style>
+    html {
+      font-size: 18px;
+    }
+    body {
+      font-size: 1rem;
+    }
+    h1,h3 {
+      letter-spacing: -.04em;
+    }
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    h3 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      padding-right: 4rem;
+    }
+    .lead {
+      font-size: 1.4rem;
+      font-weight: 300;
+    }
+    pre {
+      display: inline-block;
+      font-size: 85%;
+      white-space: pre-wrap;       /* css-3 */
+      white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+      white-space: -pre-wrap;      /* Opera 4-6 */
+      white-space: -o-pre-wrap;    /* Opera 7 */
+      word-wrap: break-word;
+    }
+    .grid {
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-gap: 1rem;
+    }
+    .grid-4 {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .grid-2-4-8 {
+      grid-template-columns: 4fr 8fr;
+    }
+    .grid-2-3-9 {
+      grid-template-columns: 3fr 9fr;
+    }
+
+    .list-no-style {
+      list-style: none;
+      padding-left: 0;
+    }
+    .list-no-style li {
+      padding: .4rem 0;
+    }
+  </style>
+  <div class="container">
+    <div class="min-h-screen justify-center px-10 py-6">
+      <div class="max-w-lg mx-auto text-center">
+        <sv-icon icon-path="/assets/svgs/airplay.svg" scale="4" stroke-color="blue"></sv-icon>
+        <sv-icon icon-path="/assets/svgs/cloud-lightning.svg" scale="4" stroke-color="red"></sv-icon>
+        <sv-icon icon-path="/assets/svgs/command.svg" scale="4" stroke-color="green"></sv-icon>
+      </div>
+      <div class="max-w-lg mx-auto text-center">
+          <sv-icon icon-path="/assets/svgs/codesandbox.svg" scale="2.4"></sv-icon>
+          <sv-icon icon-path="/assets/svgs/code.svg" scale="2.4"></sv-icon>
+          <sv-icon icon-path="/assets/svgs/box.svg" scale="2.4"></sv-icon>
+          <sv-icon icon-path="/assets/svgs/cloud.svg" scale="2.4"></sv-icon>
+          <sv-icon icon-path="/assets/svgs/codepen.svg" scale="2.4"></sv-icon>
+      </div>
+      <h1 class="text-center my-4 text-gray-700">SvIcon & SvIconSprite</h1>
+      <div class="bg-gray-100 shadow max-w-3xl py-4 px-8 text-center mx-auto"><p class="lead">Contoh pemanfaatan SvIcon dan SvIconSprite dengan icon dari <a href="https://feathericons.com/" class="bg-blue-500 text-white hover:bg-blue-700 px-1 inline-block font-semibold uppercase text-sm">feathericons</a></p></div>
+      <div class="bg-white max-w-3xl my-4 py-4 mx-auto">
+          <h3 class="flex flex-row align-middle mb-4 text-gray-800 border-b border-blue-200"><sv-icon class="mr-2" icon-path="/assets/svgs/code.svg" scale=".8"></sv-icon><pre>icon-path attr</pre></h3>
+          <p class="text-black"><pre>&lt;sv-icon path=&quot;/url/file.svg&quot;&gt;&lt;/sv-icon&gt;</pre></p>
+          <ul class="list-no-style mt-8">
+            <li>
+              <span class="px-4 w-full flex flex-row align-start" data-escape="list">
+                <sv-icon icon-path="/assets/svgs/users.svg"></sv-icon>
+              </span>
+            </li>
+            <li>
+              <span class="px-4 w-full flex flex-row align-start" data-escape="list">
+                <sv-icon icon-path="/assets/svgs/alert-circle.svg"></sv-icon>
+              </span>
+            </li>
+            <li>
+              <span class="px-4 w-full flex flex-row align-start" data-escape="list">
+                <sv-icon icon-path="/assets/svgs/briefcase.svg"></sv-icon>
+              </span>
+            </li>
+            <li>
+              <span class="px-4 w-full flex flex-row align-start" data-escape="list">
+                <sv-icon icon-path="/assets/svgs/box.svg"></sv-icon>
+              </span>
+            </li>
+            <li>
+              <span class="px-4 w-full flex flex-row align-start" data-escape="list">
+                <sv-icon icon-path="/assets/svgs/camera.svg"></sv-icon>
+              </span>
+            </li>
+            <li>
+              <span class="px-4 w-full flex flex-row align-start" data-escape="list">
+                <sv-icon icon-path="/assets/svgs/clock.svg"></sv-icon>
+              </span>
+            </li>
+            <li>
+              <span class="px-4 w-full flex flex-row align-start" data-escape="list">
+                <sv-icon icon-path="/assets/svgs/clipboard.svg"></sv-icon>
+              </span>
+            </li>
+          </ul>
+
+      </div>
+      <div class="bg-white max-w-3xl my-4 py-4 mx-auto">
+        <h3 class="mb-4 text-gray-800"><pre>scale, fill-color, stroke-color, stroke-width attr</pre></h3>
+        <p class="flex flex-row align-middle text-gray-800">
+          <sv-icon class="mr-2 inline-block" icon-path="/assets/svgs/code.svg" scale="1.4"></sv-icon>
+          <span data-escape="sum">
+              <sv-icon scale="2.4" icon-path="/path/file.svg" stroke-color="#344343" fill-color="#111111"></sv-icon>
+          </span>
+        </p>
+
+        <ul class="list-no-style mt-8">
+          <li>
+            <span class="px-4 w-full flex flex-row align-start" data-escape="list">
+              <sv-icon scale="2.4" icon-path="/assets/svgs/credit-card.svg" stroke-color="#344343"></sv-icon>
+            </span>
+          </li>
+          <li>
+            <span class="px-4 w-full flex flex-row align-start" data-escape="list">
+                <sv-icon scale="2.4"  icon-path="/assets/svgs/grid.svg" stroke-color="black"  fill-color="red" stroke-width="1"></sv-icon>
+            </span>
+          </li>
+          <li>
+            <span class="px-4 w-full flex flex-row align-start" data-escape="list">
+              <sv-icon scale="2.4"  icon-path="/assets/svgs/link-2.svg" stroke-color="green"></sv-icon>
+            </span>
+          </li>
+          <li>
+            <span class="px-4 w-full flex flex-row align-start" data-escape="list">
+              <sv-icon scale="2.4"  icon-path="/assets/svgs/map-pin.svg" stroke-color="blue"></sv-icon>
+            </span>
+          </li>
+          <li>
+            <span class="px-4 w-full flex flex-row align-start" data-escape="list">
+              <sv-icon scale="2.4"  icon-path="/assets/svgs/mail.svg" stroke-color="indigo" fill-color="none"></sv-icon>
+            </span>
+          </li>
+          <li>
+            <span class="px-4 w-full flex flex-row align-start" data-escape="list">
+              <sv-icon scale="2.4" icon-path="/assets/svgs/pause.svg" stroke-color="none" fill-color="blue"></sv-icon>
+            </span>
+          </li>
+          <li>
+            <span class="px-4 w-full flex flex-row align-start" data-escape="list">
+              <sv-icon scale="2.4" icon-path="/assets/svgs/slack.svg" stroke-color="black" stroke-width="1" fill-color="green"></sv-icon>
+            </span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    let escapes;
+    let escapeSums;
+    document.addEventListener('DOMContentLoaded', (e) => {
+      escapeSums = document.querySelectorAll('[data-escape="sum"]');
+      for (let x = 0; x < escapeSums.length; x++) {
+        let inner = escapeSums[x].innerHTML;
+        console.log(inner);
+        let escaped = _.escape(inner);
+        escapeSums[x].innerHTML = `<pre class="text-sm font-light">${escaped.trim()}</pre>`;
+      }
+
+      escapes = document.querySelectorAll('[data-escape="list"]');
+      for (let i = 0; i < escapes.length; i++) {
+        let span = document.createElement('span');
+        span.setAttribute('class', 'flex flex-col justify-center items-center px-4 block text-left text-xs font-light text-gray-800 align-middle');
+        let inner = escapes[i].innerHTML;
+        escapes[i].appendChild(span).innerHTML = _.escape(inner);
+      }
+
+    })
+  </script>
+</body>
+</html>
