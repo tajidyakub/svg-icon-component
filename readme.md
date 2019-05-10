@@ -2,7 +2,7 @@
 
 > Menggunakan inline SVG melalui custom component.
 
-![SVG Icon Component](svg-icon-component.png)
+![SVG Icon Component](https://cdn.jsdelivr.net/gh/tajidyakub/svg-icon-component@master/svg-icon-component.png)
 
 - Tajid Yakub <tajid.yakub@gmail.com>
 - https://github.com/tajidyakub/svg-icon-component
@@ -99,4 +99,3 @@ File sprite secara default diletakkan di dalam direktori `src/assets/sprites` de
 Inject SVG Sprites dilakukan di dalam html dengan secara default memiliki hidden attributes sehingga tidak membutuhkan ruang representasi di dalam DOM.
 
 Hal ini hanya dilakukan pada `request` pertama dan melalui `cache` pada `request` berikutnya.
-
