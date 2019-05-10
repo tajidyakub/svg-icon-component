@@ -5,7 +5,7 @@
  * This is the functionality of the sprite injector
  * module required globally by Stencil compiler.
  */
-import { Component, Element, Prop } from "@stencil/core";
+import { Component, Element, Prop, Method } from "@stencil/core";
 import { spriteInject } from "./sv-sprite-injector";
 
 @Component({
@@ -30,7 +30,11 @@ export class SvIconSprite {
   @Prop({ reflectToAttr: true }) strokeColor: string = "currentColor";
 
   constructor() {
-    spriteInject('/assets/sprites/sprites.svg',{});
+    this.inject(window.spritesPath);
+  }
+
+  inject(path: string) {
+    spriteInject(path,{});
   }
   /**
    * Setup the dimension of the Icon
