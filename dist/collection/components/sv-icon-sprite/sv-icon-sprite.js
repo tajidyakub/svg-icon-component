@@ -5,7 +5,10 @@ export class SvIconSprite {
         this.strokeWidth = "2";
         this.fillColor = "none";
         this.strokeColor = "currentColor";
-        spriteInject('/assets/sprites/sprites.svg', {});
+        this.inject("https://cdn.jsdelivr.net/gh/tajidyakub/svg-icon-component@latest/dist/collection/assets/sprites/sprites.svg");
+    }
+    inject(path) {
+        spriteInject(path, {});
     }
     setDimension(scale) {
         let width = `${scale}em`;

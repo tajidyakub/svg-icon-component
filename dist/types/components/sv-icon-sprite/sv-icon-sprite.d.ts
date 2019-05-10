@@ -16,6 +16,7 @@ export declare class SvIconSprite {
     /** Optional Stroke color prop (default: "currentColor") */
     strokeColor: string;
     constructor();
+    inject(path: string): void;
     /**
      * Setup the dimension of the Icon
      *
