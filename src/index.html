@@ -9,6 +9,10 @@
 
   <link href="https://unpkg.com/tailwindcss@next/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
+  <script src="https://unpkg.com/inject-sprites@latest/dist/index.js"></script>
+  <script>
+    sprites.inject("/assets/sprites/sprites.svg");
+  </script>
 </head>
 <body>
   <style>
@@ -85,6 +89,7 @@
       <div class="bg-white max-w-3xl my-4 py-4 mx-auto">
           <h3 class="flex flex-row align-middle mb-4 text-gray-800 border-b border-blue-200"><sv-icon class="mr-2" icon-path="/assets/svgs/code.svg" scale=".8"></sv-icon><pre>icon-path attr</pre></h3>
           <p class="text-black"><pre>&lt;sv-icon path=&quot;/url/file.svg&quot;&gt;&lt;/sv-icon&gt;</pre></p>
+          <sv-icon-sprite icon="airplay"></sv-icon-sprite>
           <ul class="list-no-style mt-8">
             <li>
               <span class="px-4 w-full flex flex-row align-start" data-escape="list">
@@ -171,7 +176,32 @@
           </li>
         </ul>
       </div>
+      <div class="bg-white max-w-3xl my-4 py-4 mx-auto">
+          <h3 class="mb-4 text-gray-800"><pre><sv-icon-sprite icon="facebook"></sv-icon-sprite>scale, fill-color, stroke-color, stroke-width attr</pre></h3>
+          <p class="flex flex-row align-middle text-gray-800">
+            <sv-icon class="mr-2 inline-block" icon-path="/assets/svgs/code.svg" scale="1.4"></sv-icon>
+            <span data-escape="sum">
+                <sv-icon scale="2.4" icon-path="/path/file.svg" stroke-color="#344343" fill-color="#111111"></sv-icon>
+            </span>
+          </p>
 
+          <ul class="list-no-style mt-8">
+            <li>
+              <span class="px-4 w-full flex flex-row align-start" data-escape="list">
+                <sv-icon-sprite scale="2.4" icon="archive" stroke-color="#344343"></sv-icon-sprite>
+              </span>
+            </li>
+            <li>
+              <span class="px-4 w-full flex flex-row align-start" data-escape="list">
+                <sv-icon-sprite scale="1" icon="code" stroke-color="#344343"></sv-icon-sprite><span>CODEMANUAL</span>
+              </span>
+            </li>
+            <li>
+              <span class="px-4 flex items-baseline content-start">
+                <sv-icon-sprite class="ml-0 mr-1" scale="1" icon="code" stroke-color="#344343"></sv-icon-sprite><span class="ml-1 mr-auto">CODEMANUAL</span>
+              </span>
+            </li>
+          </ul>
     </div>
   </div>
 
@@ -182,7 +212,7 @@
       escapeSums = document.querySelectorAll('[data-escape="sum"]');
       for (let x = 0; x < escapeSums.length; x++) {
         let inner = escapeSums[x].innerHTML;
-        console.log(inner);
+        // console.log(inner);
         let escaped = _.escape(inner);
         escapeSums[x].innerHTML = `<pre class="text-sm font-light">${escaped.trim()}</pre>`;
       }

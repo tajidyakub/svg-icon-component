@@ -5,7 +5,13 @@
       "dependencies": [],
       "componentClass": "SvIcon",
       "componentPath": "components/sv-icon/sv-icon.js",
-      "styles": {},
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/sv-icon/sv-icon.css"
+          ]
+        }
+      },
       "props": [
         {
           "name": "fillColor",
@@ -48,7 +54,13 @@
       "dependencies": [],
       "componentClass": "SvIconSprite",
       "componentPath": "components/sv-icon-sprite/sv-icon-sprite.js",
-      "styles": {},
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/sv-icon-sprite/sv-icon-sprite.css"
+          ]
+        }
+      },
       "props": [
         {
           "name": "fillColor",

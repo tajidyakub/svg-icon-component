@@ -1,4 +1,6 @@
-export class SvIconSprite {
+import { h } from '../svicon.core.js';
+
+class SvIconSprite {
     constructor() {
         this.scale = "1";
         this.strokeWidth = "2";
@@ -48,5 +50,7 @@ export class SvIconSprite {
             "reflectToAttr": true
         }
     }; }
-    static get style() { return "/**style-placeholder:sv-icon-sprite:**/"; }
+    static get style() { return "sv-icon-sprite{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;-ms-flex-align:baseline;align-items:baseline;-ms-flex-line-pack:center;align-content:center;margin:auto;line-height:1.5;-ms-flex-positive:0;flex-grow:0}"; }
 }
+
+export { SvIconSprite };

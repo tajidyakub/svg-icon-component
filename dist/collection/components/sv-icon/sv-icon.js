@@ -71,4 +71,5 @@ export class SvIcon {
             "reflectToAttr": true
         }
     }; }
+    static get style() { return "/**style-placeholder:sv-icon:**/"; }
 }

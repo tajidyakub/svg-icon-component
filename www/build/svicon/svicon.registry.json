@@ -2,18 +2,18 @@
   "namespace": "svicon",
   "fsNamespace": "svicon",
   "loader": "../svicon.js",
-  "core": "svicon.uignasjt.js",
-  "corePolyfilled": "svicon.nnf5ltmk.js",
+  "core": "svicon.swcepf6v.js",
+  "corePolyfilled": "svicon.ygyatqmh.js",
   "components": {
     "sv-icon": {
       "bundleIds": {
-        "$": "2sejchax"
+        "$": "scjw9rbp"
       },
       "encapsulation": "shadow"
     },
     "sv-icon-sprite": {
       "bundleIds": {
-        "$": "sid7utyy"
+        "$": "sfpejjpw"
       }
     }
   }

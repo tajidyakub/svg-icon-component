@@ -1,0 +1,9 @@
+sv-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  align-content: center;
+  margin: auto;
+  line-height: 1.5;
+  flex-grow: 0;
+}

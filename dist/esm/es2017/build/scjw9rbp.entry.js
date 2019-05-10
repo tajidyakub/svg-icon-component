@@ -72,6 +72,7 @@ class SvIcon {
             "reflectToAttr": true
         }
     }; }
+    static get style() { return "sv-icon{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;-ms-flex-align:baseline;align-items:baseline;-ms-flex-line-pack:center;align-content:center;margin:auto;line-height:1.5;-ms-flex-positive:0;flex-grow:0}"; }
 }
 
 export { SvIcon };

@@ -6,10 +6,10 @@
  * module required globally by Stencil compiler.
  */
 import { Component, Element, Prop } from "@stencil/core";
-import { spriteInject } from "./sv-sprite-injector";
 
 @Component({
-  tag: "sv-icon-sprite"
+  tag: "sv-icon-sprite",
+  styleUrl: "sv-icon-sprite.css"
 })
 export class SvIconSprite {
   /** Private width and height prop */
@@ -29,13 +29,6 @@ export class SvIconSprite {
   /** Optional Stroke color prop (default: "currentColor") */
   @Prop({ reflectToAttr: true }) strokeColor: string = "currentColor";
 
-  constructor() {
-    this.inject("https://cdn.jsdelivr.net/gh/tajidyakub/svg-icon-component@latest/dist/collection/assets/sprites/sprites.svg");
-  }
-
-  inject(path: string) {
-    spriteInject(path,{});
-  }
   /**
    * Setup the dimension of the Icon
    *

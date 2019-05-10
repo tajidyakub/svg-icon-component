@@ -7,6 +7,7 @@ import { Component, Element, Prop } from "@stencil/core";
 
 @Component({
   tag: "sv-icon",
+  styleUrl: "sv-icon.css",
   shadow: true
 })
 export class SvIcon {
